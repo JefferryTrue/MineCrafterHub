@@ -141,14 +141,15 @@ h1 {
   text-decoration: none;
   padding: 10px;
   color: antiquewhite;
+  background-color:rgb(37, 63, 64);
 }
 
 .actions a:hover {
-  background-color: #42d392;
+  background-color: #126640;
 }
 
 .game {
-  background-color: #42b883;
+  background-color: #42b883 !important;
 }
 
 .preview {
@@ -170,7 +171,7 @@ h1 {
   margin: 0 30px 20px 30px;
   display: inline-block;
   border-radius: 22px;
-  background-color: #d3dfd8;
+  background-color: #caf1db;
 }
 
 .prv img {
@@ -206,7 +207,7 @@ h1 {
     font-size: 48px;
   }
   .description {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 30px;
   }
   .actions a {
@@ -214,14 +215,14 @@ h1 {
     margin-left: 4px;
   }
   .prv {
-    width: 290px;
+    width: 306px;
     padding: 16px;
   }
   .preview {
     margin-top: 50px;
   }
   .prv img {
-    width: 290px;
+    width: 300px;
     height: 180px;
   }
 }
