@@ -20,29 +20,40 @@
                                 <a href="/community" class="community">游戏社区</a>
                             </p>
                         </section>
-
                     </div>
                 </div>
             </main>
         </div>
     </div>
 
+    
+
   </div>
 </template>
 
 <script>
-
 export default {
     name:'index',
     data(){
         return {
-
+            arr1:[
+			require('../assets/carouselImg/1.png'),
+			require('../assets/carouselImg/2.png'),
+			require('../assets/carouselImg/3.png'),
+		],
+		hrs:[
+			"https://www.minecraft.net/zh-hans",
+			"http://www.minecraftxz.com/bsl-shaders/",
+			"http://www.minecraftxz.com/SEUS/"
+		]
         }
     },
     components:{
-    }
+}
 }
 </script>
+
+
 
 <style scoped>
 
@@ -87,27 +98,10 @@ h1{
     margin: 25px 0 25px 0;
 }
 
-@media (max-width: 768px){
-    .tagline{
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 960px){
-    .tagline{
-        font-weight: 900;
-        font-size: 64px;
-    }
-    .description{
-        font-size: 18px;
-        margin-bottom: 48px;
-    }
-
-}
-
 .description{
     max-width: 960px;
-    line-height: 1.5;;
+    font-size: 35px;
+    line-height: 1.5;
     color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
     margin: 24px auto 40px;
@@ -116,7 +110,7 @@ h1{
 .actions a{
     margin: 0 0 0 30px;
     display: inline-block;
-    font-size: 16px;
+    font-size: x-large;
     border-radius: 10px;
     text-decoration: none;
     padding: 10px;
@@ -131,5 +125,35 @@ h1{
     background-color:#42b883;
     
 }
+
+@media (max-width: 960px){
+    .tagline{
+        font-weight: 900;
+        font-size: 64px;
+    }
+    .description{
+        font-size: 30px;
+        margin-bottom: 48px;
+    }
+    .actions a{
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 768px){
+    .tagline{
+        font-size: 48px;
+    }
+    .description{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .actions a{
+        font-size: x-large;
+        margin-left: 4px;
+    }
+}
+
+
 
 </style>

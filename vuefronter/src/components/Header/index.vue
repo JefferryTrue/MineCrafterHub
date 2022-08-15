@@ -4,14 +4,14 @@
         <div class="VPNavBar" >
             <div class="container " >
                 <a href="/index" class="leftLogo">
-                    <img src="../../assets/LOGO.png">
+                    <img src="../../assets/Header/LOGO.png">
                     <h1>MineCrafter</h1>
                 </a>
 
                 <div class="content " >
                     <div class="VPNavBarSearch hidden-sm-and-up" >
-                        <img src="../../assets/icons8-menu-16.png" @click="changeLogo()" v-if="!ShowSelect">
-                        <img src="../../assets/icons8-close-16.png"  @click="changeLogo()" v-if="ShowSelect">
+                        <img src="../../assets/Header/icons8-menu-16.png" @click="changeLogo()" v-if="!ShowSelect">
+                        <img src="../../assets/Header/icons8-close-16.png"  @click="changeLogo()" v-if="ShowSelect">
                     </div>
 
                     <nav class="VPNavBarMenu hidden-xs-only">
@@ -20,7 +20,7 @@
                         <a href="/resource" class="VPNavBarMenuLink">游戏资源</a>
                         <a href="/community" class="VPNavBarMenuLink">社区</a>
                         <a href="https://github.com/JefferryTrue" class="VPNavBarMenuLink">
-                            <img src="../../assets/icons8-github-30.png">
+                            <img src="../../assets/Header/icons8-github-30.png">
                         </a>
                     </nav>
 
@@ -76,6 +76,7 @@ export default {
     position:relative;
     flex-direction: column;
     top:0;
+    height: 54px;
     left: 0;
     width: 100%;
 }

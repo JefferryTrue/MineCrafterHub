@@ -7,12 +7,13 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 import animate from "animate.css";
-
+import EasySlider from 'vue-easy-slider'
 Vue.use(animate);
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI);
+Vue.use(EasySlider);
 
 Vue.directive('title', {
   inserted: function (el, binding) {

@@ -5,14 +5,14 @@ import Index from '../views/Index'
 import Download from '../views/Download'
 import Resource from '../views/Resource'
 import Community from '../views/Community'
-
 Vue.use(VueRouter)
 
 const routes = [
   {
     path:'/',
-    name:'home',
-    redirect:'/index'
+    name:'test',
+    //component:Carousel
+    //redirect:'/index'
   },
   {
     path: '/index',
@@ -41,7 +41,5 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
-
 
 export default router

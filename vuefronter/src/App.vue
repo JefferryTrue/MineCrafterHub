@@ -8,18 +8,18 @@
 <script>
 import Header1 from './components/Header/index.vue'
 import 'element-ui/lib/theme-chalk/display.css';
+// import Carousel from './components/Carousel/index.vue';
 
 export default{
   name:"app",
   data(){
 	return {
-
+		
 	}
   },
-  components:{Header1}
+  components:{ Header1 }
 }
 </script>
-
 
 <style>
 
