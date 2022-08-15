@@ -1,0 +1,30 @@
+{
+  "name": "minecrafterhub",
+  "version": "1.0.0",
+  "description": "A web site for minecrafter to download game,communicate...",
+  "main": "index.js",
+  "scripts": {
+    "test": "node Server.js",
+    "server": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JefferryTrue/MineCrafterHub.git"
+  },
+  "keywords": [
+    "SERVER"
+  ],
+  "author": "JefferryTrue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JefferryTrue/MineCrafterHub/issues"
+  },
+  "homepage": "https://github.com/JefferryTrue/MineCrafterHub#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
