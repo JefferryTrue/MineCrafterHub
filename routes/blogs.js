@@ -22,6 +22,7 @@ router.post("/addBlog",(req,res)=> {
 
     const newBlog = new Blog({
         title:req.body.title,
+        tag:req.body.tag,
         preview:req.body.preview,
         author:req.body.author,
         content:req.body.content,
@@ -68,6 +69,9 @@ router.post("/editBlog/:id",(req,res)=> {
 
     if(req.body.title){
         blogFields.title = req.body.title;
+    }
+    if(req.body.tag){
+        blogFields.tag = req.body.tag;
     }
     if(req.body.preview){
         blogFields.preview = req.body.preview;

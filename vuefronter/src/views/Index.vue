@@ -52,9 +52,9 @@
     <div class="responser">
       <div class="resContainer">
         <h2>Our Sponsers:</h2>
-        <div class="MERTRURY">
+        <div class="VUETER">
           <h1>
-            <a href="https://github.com/JefferryTrue">MERTRURY Studio</a>
+            <a href="https://github.com/JefferryTrue">VUETER Studio</a>
           </h1>
         </div>
       </div>
@@ -251,7 +251,7 @@ h1 {
   padding: 0;
 }
 
-.MERTRURY{
+.VUETER{
   display: block;
   margin:0;
   padding:0;
@@ -266,8 +266,7 @@ h2{
   text-align: center;
 }
 
-.MERTRURY h1{
-  display: inline-block;
+.VUETER h1{
   margin:60px;
 }
 
