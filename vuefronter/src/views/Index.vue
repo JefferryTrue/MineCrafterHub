@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="preview">
+    <div class="preview animate__animated animate__bounceIn">
       <div class="prvContainer">
         <span class="prv">
           <img src="../assets/carouselImg/1.png" alt="" />
@@ -46,6 +46,17 @@
           <h3>新手教程</h3>
           <p>新手如何度过第一天</p>
         </span>
+      </div>
+    </div>
+
+    <div class="responser">
+      <div class="resContainer">
+        <h2>Our Sponsers:</h2>
+        <div class="MERTRURY">
+          <h1>
+            <a href="https://github.com/JefferryTrue">MERTRURY Studio</a>
+          </h1>
+        </div>
       </div>
     </div>
   </div>
@@ -154,8 +165,9 @@ h1 {
 
 .preview {
   display: block;
-  margin: 100px 0 100px 0;
-  padding: 0;
+  padding: 100px 0 100px 0;
+  
+  border-bottom:1px solid #caf1db;
 }
 
 .prvContainer {
@@ -226,4 +238,52 @@ h1 {
     height: 180px;
   }
 }
+
+.responser{
+  display: block;
+  padding: 0;
+}
+
+.resContaner{
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.MERTRURY{
+  display: block;
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+h2{
+  display: block;
+  padding: 20px;
+  color:#b8dfb4;
+  margin: 0;
+  text-align: center;
+}
+
+.MERTRURY h1{
+  display: inline-block;
+  margin:60px;
+}
+
+h1 a{
+  text-decoration: none;
+  color: #c39c1c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 a:hover{
+  color: #b8dfb4;
+}
+
+.MERTRURY{
+  margin: 0;
+  padding: 0;
+}
+
 </style>
