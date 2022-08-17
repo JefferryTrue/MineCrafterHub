@@ -5,6 +5,7 @@ import Index from '../views/Index'
 import Download from '../views/Download'
 import Resource from '../views/Resource'
 import Community from '../views/Community'
+import Upload from '../views/Upload'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     name:'test',
     //component:Carousel
     //redirect:'/index'
+  },
+  {
+    path:'/upload',
+    name:'upload',
+    component:Upload,
   },
   {
     path: '/index',

@@ -6,22 +6,30 @@
         <p>我的世界启动器是玩我的世界的玩家必须使用的管理工具，使用启动器可以帮助玩家轻松管理我的世界的各种不同游戏版本，一些游戏存档，我的世界启动器的版本是非常多的，各种不同的我的世界启动器都是有着自己特色的，感兴趣的玩家就来看看吧！</p>
       </div>
       
-      <ArticleOutline v-bind:tag="Runner"></ArticleOutline>
+      <ArticleOutline v-bind:arrays="blogs"></ArticleOutline>
     </div>
   </div>
 </template>
 
 <script>
+const axios = require('axios').default;
 import ArticleOutline from '../components/ArticleOutline/index.vue';
 export default {
     name:'download',
     data(){
         return {
-            
+          blogs:[]
         }
     },
     components:{
       ArticleOutline
+    },
+    created:function(){
+      axios.get('http://localhost:3000/api/blogs/getbytag/runner')
+      .then(blogs => {
+        
+        this.blogs = blogs.data;
+      })
     }
 }
 </script>

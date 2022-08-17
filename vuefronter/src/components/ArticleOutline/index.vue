@@ -1,36 +1,40 @@
 <template>
     <div class="Blogs">
-        <a class="Each" href="/index">
-            <h2 class="Each-title">123</h2>
+      
+        <div class="container" v-for="(item,index) in arrays" :key="index">
+          <a class="Each" :href="'/viewContent/'+item._id" >
+            <h2 class="Each-title">{{item.title}}</h2>
             <div class="content">
 
-            <div class="imgDiv">
-                <img src="../../assets/carouselImg/1.png" alt="">
-            </div>
+              <div class="imgDiv">
+                  <img src="../../assets/carouselImg/1.png" alt="">
+              </div>
 
-            <div class="textDiv">
-                <p class="preview">我的世界启动器是玩我的世界的玩家必须使用的管理工具，使用启动器可以帮助玩家轻松管理我的世界的各种不同游戏版本，一些游戏存档，我的世界启动器的版本是非常多的，各种不同的我的世界启动器都是有着自己特色的，感兴趣的玩家就来看看吧！</p>
-            </div>
+              <div class="textDiv">
+                  <p class="preview">{{item.preview}}</p>
+              </div>
             </div>
             <h2 class="readAll">阅读全文..</h2>
         </a>
+        </div>
     </div>
 
 </template>
 
 <script>
 export default {
-    name:'article',
+    name:'articleOutline',
     data(){
+      return {
 
+      }
     },
-    props:['tag']
+    props:['arrays']
 }
 </script>
 
 <style scoped>
 .Blogs{
-  background-color:bisque;
   display: block;
   width: 100%;
   margin: 0 0 100px 0;
@@ -38,11 +42,19 @@ export default {
   border-radius: 12px;
 }
 
+.container{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .Each{
+  background-color:bisque;
   display: block;
   width: 100%;
   margin: 0 0 30px 0;
   padding: 0;
+  border-radius: 10px;
   text-decoration: none;
 }
 

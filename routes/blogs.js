@@ -60,6 +60,16 @@ router.get("/:id",(req,res) => {
     .catch(err => res.status(404).json(err));
 })
 
+router.get('/getbytag/:tag',(req,res) => {
+    Blog.find({tag:req.params.tag})
+    .then(blogs => {
+        if(!blogs){
+            return res.status(404).json("没有任何内容");
+        }
+        res.json(blogs)
+    })
+})
+
 // @route POST api/blogs/editBlog
 // @ desc 创建信息接口
 // @access private

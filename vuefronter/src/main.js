@@ -8,7 +8,19 @@ import 'element-ui/lib/theme-chalk/index.css';
 import animate from "animate.css";
 Vue.use(animate);
 
+import axios from 'axios'
+
+Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
+
+import mavonEditor from 'mavon-editor';
+import 'mavon-editor/dist/css/index.css'
+
+import showdown from 'showdown'
+Vue.prototype.converter = new showdown.Converter();
+
+Vue.use(mavonEditor);
+
 
 
 Vue.directive('title', {
