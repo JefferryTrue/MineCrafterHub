@@ -3,22 +3,42 @@
 fs = require("fs")
 
 exports.uploadimg = (req,res) => {
-    let oldName = req.files[0].filename;
+    let oldName = req.file.filename;
 
-    let originalname = req.files[0].originalname;
+    let newName = req.file.originalname;
 
-    let newName = req.files[0].originalname;
+    // let oldName = req.files[0].filename;
+
+    // let newName = req.files[0].originalname;
 
     fs.renameSync('./public/upload/'+oldName,'./public/upload/'+newName);
 
     res.send({
         err:0,
-        url:"http://127.0.0.1:3000/"+newName,
+        url:"http://127.0.0.1:3000/upload/"+newName,
+        name:newName
+    });
+}
+
+exports.previewImg = (req,res) => {
+    // let oldName = req.files[0].filename;
+
+    // let newName = req.files[0].originalname;
+    let oldName = req.file.filename;
+
+    let newName = req.file.originalname;
+
+    fs.renameSync('./public/previewImg/'+oldName,'./public/previewImg/'+newName);
+
+    res.send({
+        err:0,
+        url:"http://127.0.0.1:3000/previewImg/"+newName,
         name:newName
     });
 }
 
 exports.delimg = (req,res) => {
+
     const name = req.body.url;
     console.log(name);
     
@@ -29,3 +49,4 @@ exports.delimg = (req,res) => {
         console.log("Deleted Successfully!");
     })
 }
+

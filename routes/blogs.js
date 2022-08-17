@@ -16,6 +16,7 @@ router.get("/test",(req,res) => {
 // @ desc 创建信息接口
 // @access private
 router.post("/addBlog",(req,res)=> {
+    console.log(req.body);
 
     const _now = new Date();
     const date = _now.toLocaleString();
@@ -26,6 +27,7 @@ router.post("/addBlog",(req,res)=> {
         preview:req.body.preview,
         author:req.body.author,
         content:req.body.content,
+        previewImg:req.body.previewImg,
         date:date
     });
 
@@ -46,6 +48,7 @@ router.get("/",(req,res)=>{
     })
     .catch(err => res.status(404).json(err));
 })
+
 // @route GET api/blogs/:id
 // @ desc 获取单个信息
 // @access private

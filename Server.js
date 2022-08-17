@@ -12,11 +12,12 @@ const multer = require("multer");
 
 application.use(cors());
 
-let objMulter = multer({dest:"./public/upload"});
+//let objMulter = multer({dest:"./public/upload"});
 
-application.use(objMulter.any());
+//application.use(objMulter.any());
 
-application.use(express.static("./public/upload"));
+application.use(express.static('./public'));
+// application.use(express.static("./public/previewImg"));
 
 const dbUrl = require("./config/keys").MongoURL;
 

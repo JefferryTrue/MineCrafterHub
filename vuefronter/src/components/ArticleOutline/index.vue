@@ -7,7 +7,7 @@
             <div class="content">
 
               <div class="imgDiv">
-                  <img src="../../assets/carouselImg/1.png" alt="">
+                  <img :src=item.previewImg alt="">
               </div>
 
               <div class="textDiv">

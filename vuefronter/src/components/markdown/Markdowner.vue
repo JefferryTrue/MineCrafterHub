@@ -55,7 +55,7 @@ export default{
         },
         $imgDel(pos) {
             var formdata = new FormData()
-            formdata.append('url',pos[1]._name);
+            formdata.append('url', pos[1]._name);
             axios({
                 url:'http://127.0.0.1:3000/api/img/delimg/',
                 method:'post',

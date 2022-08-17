@@ -10,11 +10,13 @@
         <input type="text" v-model="author">
         <h2>tag:</h2>
         <input type="text" v-model="tag">
+        <h2>预览图片</h2>
+        <input type="file">
     </span>
     
     <Markdowner ref='ch'></Markdowner>
 
-    <button @click="sendBlog">发表</button>
+    <button @click="sendBlog()">发表</button>
   </div>
 </template>
 
@@ -25,11 +27,11 @@ export default {
     name:'upload',
     data(){
         return {
-            title:'',
-            content:'',
-            author:'',
-            preview:'',
-            tag:''
+            title:'123',
+            content:'123',
+            author:'123',
+            preview:'123',
+            tag:'123'
         }
     },
     components:{Markdowner},
@@ -38,17 +40,30 @@ export default {
             let markdown = this.$refs.ch;
             var htmlContent = this.converter.makeHtml(markdown.context);
             this.content = htmlContent;
-            var formdata = new FormData();
-            formdata.append('title',this.title);
-            formdata.append('preview',this.preview);
-            formdata.append('author',this.author);
-            formdata.append('content',this.content);
-            formdata.append('tag',this.tag);
+
+            var ImgFormData = new FormData;
+            ImgFormData.append('image',document.querySelector('input[type=file]').files[0]);
+
             axios({
-                url:'http://localhost:3000/api/blogs/addBlog',
+                url:'http://localhost:3000/api/img/previewImg',
                 method:'post',
-                data:formdata,
+                data:ImgFormData,
                 headers: { 'Content-Type': 'multipart/form-data' },
+            }).then(ret => {
+                const BlogForm = {
+                    "title" : this.title,
+                    "preview":this.preview,
+                    "author":this.author,
+                    "content":this.content,
+                    "tag":this.tag,
+                    "previewImg":ret.data.url
+                }
+                axios({
+                    url:'http://localhost:3000/api/blogs/addBlog',
+                    method:'post',
+                    data:BlogForm,
+                    headers: { 'Content-Type':'application/json' },
+                })
             })
             console.log(htmlContent);
         },

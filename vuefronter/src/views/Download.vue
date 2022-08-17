@@ -27,7 +27,7 @@ export default {
     created:function(){
       axios.get('http://localhost:3000/api/blogs/getbytag/runner')
       .then(blogs => {
-        
+        console.log(blogs.data);
         this.blogs = blogs.data;
       })
     }
