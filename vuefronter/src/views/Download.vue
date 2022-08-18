@@ -45,7 +45,7 @@ export default {
 .container{
   display: block;
   margin:auto;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 30px 20px 30px;
   max-width: 1376px;
 }
 
@@ -61,7 +61,7 @@ export default {
 }
 
 .intro p{
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.2;
 }
 
@@ -70,7 +70,7 @@ export default {
     font-size: 40px;
   }
   .intro p{
-    font-size:24px
+    font-size:20px
   }
   .imgDiv{
     display: none;
@@ -79,13 +79,10 @@ export default {
 
 @media (max-width: 768px) {
   .intro h1{
-    font-size: 30px;
+    font-size: 36px;
   }
   .intro p{
-    font-size:20px
-  }
-  .intro h1{
-    font-size: 30px;
+    font-size:18px
   }
 }
 

@@ -1,6 +1,8 @@
 <template>
   <div class="manager">
-    <Upload></Upload>
+    <div class="container">
+      <Upload></Upload>
+    </div>
   </div>
 </template>
 
@@ -19,6 +21,19 @@ components:{ Upload }
 }
 </script>
 
-<style>
+<style scoped>
+.manager{
+  display: block;
+  margin: 0;
+  padding: 0;
+  width:100%;
+}
+
+.container{
+  display: block;
+  margin: auto;
+  padding: 48px;
+  max-width: 1376px;
+}
 
 </style>

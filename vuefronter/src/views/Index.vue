@@ -91,7 +91,7 @@ export default {
 }
 
 .VPContent {
-  border-bottom: 1px solid rgba(255, 248, 220, 0.456);
+  border-bottom: 1px solid #fff8dc74;
   padding-bottom: 60px;
 }
 
@@ -152,7 +152,7 @@ h1 {
   text-decoration: none;
   padding: 10px;
   color: antiquewhite;
-  background-color:rgb(37, 63, 64);
+  background-color: rgb(37, 63, 64);
 }
 
 .actions a:hover {
@@ -166,8 +166,8 @@ h1 {
 .preview {
   display: block;
   padding: 100px 0 100px 0;
-  
-  border-bottom:1px solid #caf1db;
+
+  border-bottom: 1px solid #caf1db;
 }
 
 .prvContainer {
@@ -239,50 +239,49 @@ h1 {
   }
 }
 
-.responser{
+.responser {
   display: block;
   padding: 0;
 }
 
-.resContaner{
+.resContaner {
   display: block;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-.VUETER{
+.VUETER {
   display: block;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-h2{
+h2 {
   display: block;
   padding: 20px;
-  color:#b8dfb4;
+  color: #b8dfb4;
   margin: 0;
   text-align: center;
 }
 
-.VUETER h1{
-  margin:60px;
+.VUETER h1 {
+  margin: 60px;
 }
 
-h1 a{
+h1 a {
   text-decoration: none;
   color: #c39c1c;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 a:hover{
+h1 a:hover {
   color: #b8dfb4;
 }
 
-.MERTRURY{
+.MERTRURY {
   margin: 0;
   padding: 0;
 }
-
 </style>

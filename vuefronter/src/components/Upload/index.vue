@@ -4,16 +4,16 @@
     <span>
         <h2>Title:</h2>
         <input type="text" v-model="title">
-        <h2>preview:</h2>
-        <input type="text" v-model="preview">
-        <h2>author:</h2>
-        <input type="text" v-model="author">
-        <h2>tag:</h2>
-        <select v-model="tag">
+        <h2>Preview:</h2>
+        <input type="text" v-model="preview" style="font-size:20px;width: 100%;">
+        <h2>Author:</h2>
+        <input type="text" v-model="author" style="width:40%">
+        <h2>Tag:</h2>
+        <select v-model="tag" class="sct">
             <option v-for="item in tagArray" v-bind:key="item.id" v-bind:value="item" v-text="item"></option>
         </select>
-        <h2>预览图片</h2>
-        <input type="file">
+        <h2>预览图片:</h2>
+        <label  class="FileInput">上传图片<input type="file" style="display:none"></label>
     </span>
     
     <Markdowner ref='ch'></Markdowner>
@@ -90,6 +90,50 @@ export default {
     margin: 0;
     padding:0;
 }
+
+span h2{
+    color: antiquewhite;
+    font-size:24px;
+}
+
+input{
+    width: 80%;
+    padding: 4px 0 4px 0;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.FileInput{
+    display: inline-block;
+    font-size: 24px;
+    padding: 6px;
+    margin-bottom: 20px;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 8px;
+}
+
+.FileInput:hover{
+    cursor: pointer;
+}
+
+
+.sct{
+    display: block;
+    width: 198px;
+    height: 32px;
+    background-color: transparent;
+    border: 2px solid antiquewhite;
+    border-radius: 8px;
+    font-size: 24px;
+    color: rgb(249, 177, 61);
+    align-content: center;
+    margin: 0;
+    padding: auto;
+}
+
 
 
 </style>
