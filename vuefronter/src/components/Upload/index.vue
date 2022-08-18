@@ -9,7 +9,9 @@
         <h2>author:</h2>
         <input type="text" v-model="author">
         <h2>tag:</h2>
-        <input type="text" v-model="tag">
+        <select v-model="tag">
+            <option v-for="item in tagArray" v-bind:key="item.id" v-bind:value="item" v-text="item"></option>
+        </select>
         <h2>预览图片</h2>
         <input type="file">
     </span>
@@ -31,7 +33,8 @@ export default {
             content:'123',
             author:'123',
             preview:'123',
-            tag:'123'
+            tag:'123',
+            tagArray:['runner','resource','community']
         }
     },
     components:{Markdowner},
@@ -63,15 +66,18 @@ export default {
                     method:'post',
                     data:BlogForm,
                     headers: { 'Content-Type':'application/json' },
+                }).then(res => {
+                    console.log(res.data._id)
+                    this.$router.push({ name:'viewContent', query:{ id:res.data._id} })
                 })
             })
-            console.log(htmlContent);
+            
         },
     }
 }
 </script>
 
-<style>
+<style scoped>
 .uploader{
     display: block;
     margin:auto;

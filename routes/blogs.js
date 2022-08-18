@@ -16,7 +16,7 @@ router.get("/test",(req,res) => {
 // @ desc 创建信息接口
 // @access private
 router.post("/addBlog",(req,res)=> {
-    console.log(req.body);
+    // console.log(req.body);
 
     const _now = new Date();
     const date = _now.toLocaleString();

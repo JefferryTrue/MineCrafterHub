@@ -2,7 +2,7 @@
     <div class="Blogs">
       
         <div class="container" v-for="(item,index) in arrays" :key="index">
-          <a class="Each" :href="'/viewContent/'+item._id" >
+          <a class="Each" :href="'/viewContent/?id='+item._id" >
             <h2 class="Each-title">{{item.title}}</h2>
             <div class="content">
 
