@@ -2,18 +2,19 @@
   <div class="uploader">
 
     <span>
-        <h2>Title:</h2>
+        <h2>标题:</h2>
         <input type="text" v-model="title">
-        <h2>Preview:</h2>
+        <h2>预览:</h2>
         <input type="text" v-model="preview" style="font-size:20px;width: 100%;">
-        <h2>Author:</h2>
+        <h2>作者:</h2>
         <input type="text" v-model="author" style="width:40%">
-        <h2>Tag:</h2>
+        <h2>标签:</h2>
         <select v-model="tag" class="sct">
             <option v-for="item in tagArray" v-bind:key="item.id" v-bind:value="item" v-text="item"></option>
         </select>
         <h2>预览图片:</h2>
         <label  class="FileInput">上传图片<input type="file" style="display:none"></label>
+        <h2>正文:</h2>
     </span>
     
     <Markdowner ref='ch'></Markdowner>
@@ -29,11 +30,11 @@ export default {
     name:'upload',
     data(){
         return {
-            title:'123',
-            content:'123',
-            author:'123',
-            preview:'123',
-            tag:'123',
+            title:'',
+            content:'',
+            author:'',
+            preview:'',
+            tag:'',
             tagArray:['runner','resource','community']
         }
     },

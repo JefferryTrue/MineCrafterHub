@@ -27,6 +27,9 @@ export default {
         console.log(blog.data);
         this.blog = blog.data;
       })
+    },
+    mounted:function(){
+      document.getElementsByTagName('img').setAttribute("width", "300px");
     }
 }
 </script>
@@ -45,6 +48,8 @@ export default {
   width: auto;
   max-width: 1376px;
   padding: 36px 60px 36px 60px;
+  
+  background-color: rgb(27, 49, 26);
 }
 
 .container h1{
@@ -53,12 +58,14 @@ export default {
 }
 
 .container p{
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   color:antiquewhite;
 }
 
 .context{
+  display: block;
   font-size:20px;
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
@@ -68,13 +75,10 @@ export default {
   padding: 12px;
 }
 
-.context img{
+img{
   display: block;
   text-align: center;
-  margin: auto;
-  padding: 0;
-  width: 320px;
-  height: 240px;
+
 }
 
 </style>

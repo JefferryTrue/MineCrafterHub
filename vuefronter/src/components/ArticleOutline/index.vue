@@ -58,7 +58,6 @@ export default {
 }
 
 
-
 .content{
   display: block;
   width: 100%;
